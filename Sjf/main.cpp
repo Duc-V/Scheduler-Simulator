@@ -7,9 +7,12 @@ int main(int argc, char** argv) {
     }
 
     std::string dataFileName = argv[1];
-
+    std::vector<pcb> pcbQueue;
+    
     // load pcb data into a pcb queue.
-    std::vector<pcb> pcbQueue = loader::getPCBQueue(dataFileName);
+    if(!loader::getPCBQueue(pcbQueue ,dataFileName))
+        return 1;
+
 
     // make a new sjf object
     sjf sjfScheduler(pcbQueue);

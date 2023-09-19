@@ -6,7 +6,8 @@
 
 class loader {
 public:
-    static std::vector<pcb> getPCBQueue(const std::string& filename);
+    static bool getPCBQueue(std::vector<pcb>& pcbQueue, const std::string& filename);
+    static bool isNumber(const std::string& str); 
 };
 
 #endif 

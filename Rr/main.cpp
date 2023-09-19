@@ -13,7 +13,7 @@ int main(int argc, char** argv) {
     if(argc != 3){
         std::cout << "invalid number of arguments" << std::endl;
     }
-
+    std::vector<pcb> pcbQueue;
     std::string quantumTime = argv[1];
     std::string dataFileName = argv[2];
 
@@ -22,7 +22,8 @@ int main(int argc, char** argv) {
     }
     
     // load pcb data into a pcb queue.
-    std::vector<pcb> pcbQueue = loader::getPCBQueue(dataFileName);
+    if(!loader::getPCBQueue(pcbQueue ,dataFileName))
+        return 1;
 
     // start scheduling
     rr rrScheduler(pcbQueue);

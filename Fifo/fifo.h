@@ -8,10 +8,10 @@
 
 class fifo{
     private:
-        std::vector<pcb>  pcbQueue;
+        std::vector<pcb> pcbQueue;
         double queueSize;
     public:
-        fifo(std::vector<pcb>  pcbQueue);
+        fifo(std::vector<pcb> pcbQueue);
         double getAverageWaitingTime();
         double getAverageTurnAroundTime();
 };
