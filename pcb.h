@@ -2,7 +2,6 @@
 #define PCB_H
 
 #include <iostream>
-#include "types.h"
 
 #pragma once  // tells the compiler to only include this file once
               /**
